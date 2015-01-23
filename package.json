@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "dependencies": {
+    "optimist": "^0.6.1",
     "promise": "^6.1.0"
   }
 }

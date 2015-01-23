@@ -1,5 +1,8 @@
+#!/usr/bin/env node
+
 var fs = require('fs');
 var Promise = require('promise');
+var args = require('optimist').argv
 
 var read = function(filePath) {
   return new Promise(function(resolve, reject) {
@@ -26,5 +29,5 @@ var write = function(filePath, content, splitWord, data) {
 var file = './index.html';
 
 read(file).then(function(data) {
-  write(file, '<div class="template">New content</div>', '<!-- 最新ここ -->', data);
+  write(file, args.content, args.splitWord, data);
 });
