@@ -1,8 +1,6 @@
-#!/usr/bin/env node
-
 var fs = require('fs');
 var Promise = require('promise');
-var args = require('optimist').argv
+var args = process.argv
 
 var read = function(filePath) {
   return new Promise(function(resolve, reject) {
@@ -29,5 +27,5 @@ var write = function(filePath, content, splitWord, data) {
 var file = './index.html';
 
 read(file).then(function(data) {
-  write(file, args.content, args.splitWord, data);
+  write(file, args[2], args[3], data);
 });

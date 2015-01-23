@@ -1,5 +1,5 @@
 ```
 npm i
 
-node main.js --splitWord='<!-- 最新ここ -->' --content='<div class="template">New content</div>'
+node main.js '<div class="template">New content</div>' '<!-- 最新ここ -->'
 ```
